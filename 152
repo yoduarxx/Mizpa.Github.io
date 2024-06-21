@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Inglés - Mizpa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff6666;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .question label, .question div {
+            display: block;
+            margin: 10px 0;
+        }
+        .question select {
+            margin-top: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6666;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #ffcccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .decor {
+            position: relative;
+            overflow: hidden;
+        }
+        .decor::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            height: 20px;
+            width: 20px;
+            background-color: #ff6666;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        .decor::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            height: 20px;
+            width: 20px;
+            background-color: #ff6666;
+            clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cuestionario de Inglés - Mizpa</h1>
+        <form id="quizForm">
+            <div class="question">
+                <label for="name">Nombre del estudiante:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="question">
+                <label for="grade">Grado:</label>
+                <input type="text" id="grade" name="grade" required>
+            </div>
+
+            <h2>El verbo "To Be"</h2>
+            <div class="question">
+                <p>1. ¿Cuál es la forma correcta del verbo "to be" para "I"?</p>
+                <label><input type="radio" name="q1" value="25"> Am</label>
+                <label><input type="radio" name="q1" value="0"> Is</label>
+                <label><input type="radio" name="q1" value="0"> Are</label>
+            </div>
+            <div class="question">
+                <p>2. ¿Cuál es la forma correcta del verbo "to be" para "You"?</p>
+                <label><input type="radio" name="q2" value="25"> Are</label>
+                <label><input type="radio" name="q2" value="0"> Am</label>
+                <label><input type="radio" name="q2" value="0"> Is</label>
+            </div>
+            <div class="question">
+                <p>3. "He ___ a student." (Complete la oración)</p>
+                <label><input type="radio" name="q3" value="25"> Is</label>
+                <label><input type="radio" name="q3" value="0"> Am</label>
+                <label><input type="radio" name="q3" value="0"> Are</label>
+            </div>
+            <div class="question">
+                <p>4. Verdadero o Falso: "They are teachers."</p>
+                <label><input type="radio" name="q4" value="25"> Verdadero</label>
+                <label><input type="radio" name="q4" value="0"> Falso</label>
+            </div>
+            <div class="question">
+                <p>5. Verdadero o Falso: "I is a doctor."</p>
+                <label><input type="radio" name="q5" value="0"> Verdadero</label>
+                <label><input type="radio" name="q5" value="25"> Falso</label>
+            </div>
+            <div class="question">
+                <p>6. Une correctamente:</p>
+                <div>
+                    <label>We</label>
+                    <select name="q6">
+                        <option value="0">am</option>
+                        <option value="25">are</option>
+                        <option value="0">is</option>
+                    </select>
+                </div>
+                <div>
+                    <label>She</label>
+                    <select name="q7">
+                        <option value="0">am</option>
+                        <option value="0">are</option>
+                        <option value="25">is</option>
+                    </select>
+                </div>
+                <div>
+                    <label>You</label>
+                    <select name="q8">
+                        <option value="0">am</option>
+                        <option value="25">are</option>
+                        <option value="0">is</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2>Fruits</h2>
+            <div class="question">
+                <p>7. ¿Cuál de las siguientes es una fruta?</p>
+                <label><input type="radio" name="q9" value="25"> Apple</label>
+                <label><input type="radio" name="q9" value="0"> Carrot</label>
+                <label><input type="radio" name="q9" value="0"> Spinach</label>
+            </div>
+            <div class="question">
+                <p>8. ¿Cuál de las siguientes es una fruta?</p>
+                <label><input type="radio" name="q10" value="25"> Banana</label>
+                <label><input type="radio" name="q10" value="0"> Potato</label>
+                <label><input type="radio" name="q10" value="0"> Onion</label>
+            </div>
+            <div class="question">
+                <p>9. Verdadero o Falso: "An orange is a fruit."</p>
+                <label><input type="radio" name="q11" value="25"> Verdadero</label>
+                <label><input type="radio" name="q11" value="0"> Falso</label>
+            </div>
+            <div class="question">
+                <p>10. Verdadero o Falso: "A carrot is a fruit."</p>
+                <label><input type="radio" name="q12" value="0"> Verdadero</label>
+                <label><input type="radio" name="q12" value="25"> Falso</label>
+            </div>
+            <div class="question">
+                <p>11. Une correctamente:</p>
+                <div>
+                    <label>Apple</label>
+                    <select name="q13">
+                        <option value="25">Fruit</option>
+                        <option value="0">Vegetable</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Carrot</label>
+                    <select name="q14">
+                        <option value="0">Fruit</option>
+                        <option value="25">Vegetable</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Banana</label>
+                    <select name="q15">
+                        <option value="25">Fruit</option>
+                        <option value="0">Vegetable</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2>Numbers</h2>
+            <div class="question">
+                <p>12. ¿Cuál es el número 5?</p>
+                <label><input type="radio" name="q16" value="25"> Five</label>
+                <label><input type="radio" name="q16" value="0"> Three</label>
+                <label><input type="radio" name="q16" value="0"> Seven</label>
+            </div>
+            <div class="question">
+                <p>13. ¿Cuál es el número 8?</p>
+                <label><input type="radio" name="q17" value="25"> Eight</label>
+                <label><input type="radio" name="q17" value="0"> Five</label>
+                <label><input type="radio" name="q17" value="0"> Six</label>
+            </div>
+            <div class="question">
+                <p>14. Verdadero o Falso: "10 es Ten en inglés."</p>
+                <label><input type="radio" name="q18" value="25"> Verdadero</label>
+                <label><input type="radio" name="q18" value="0"> Falso</label>
+            </div>
+            <div class="question">
+                <p>15. Verdadero o Falso: "1 es Two en inglés."</p>
+                <label><input type="radio" name="q19" value="0"> Verdadero</label>
+                <label><input type="radio" name="q19" value="25"> Falso</label>
+            </div>
+            <div class="question">
+                <p>16. Une correctamente:</p>
+                <div>
+                    <label>5</label>
+                    <select name="q20">
+                        <option value="25">Five</option>
+                        <option value="0">Four</option>
+                        <option value="0">Six</option>
+                    </select>
+                </div>
+                <div>
+                    <label>8</label>
+                    <select name="q21">
+                        <option value="25">Eight</option>
+                        <option value="0">Nine</option>
+                        <option value="0">Seven</option>
+                    </select>
+                </div>
+                <div>
+                    <label>2</label>
+                    <select name="q22">
+                        <option value="25">Two</option>
+                        <option value="0">One</option>
+                        <option value="0">Three</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="calculateScore()">Enviar</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const form = document.forms['quizForm'];
+            let score = 0;
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22'];
+            questions.forEach(question => {
+                const answer = form[question].value;
+                score += parseInt(answer);
+            });
+            const name = form['name'].value;
+            const grade = form['grade'].value;
+            score = Math.round(score / 100 * 100); // Convierte a porcentaje y redondea
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<p>Nombre: ${name}</p>
+                                         <p>Grado: ${grade}</p>
+                                         <p>Tu puntaje es: ${score}</p>`;
+        }
+    </script>
+</body>
+</html>
